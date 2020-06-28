@@ -69,7 +69,7 @@ $(document).ready(function() {
         } else {
             content.addClass();
         }
-            setTimeout(checkForChanges, 0);
+            //setTimeout(checkForChanges, 1000);
         };
         checkForChanges();
     };

@@ -13,13 +13,12 @@
                                     <div class="panel-body dashboard-panel">
                                         <div class="browser-stats">
                                             <ul class="list-unstyled">
-                                                <li><i class="fa fa-money"></i>Balance<div class="text-success pull-right">@$credit<i class="fa fa-level-up"></i></div></li>
-                                                <li><i class="fa fa-file-zip-o"></i>Uploads<div class="text-success pull-right">@fileNumber<i class="fa fa-level-up"></i></div></li>
-                                                <li><i class="fa fa-btc"></i>Bitcoin Price<div class="text-success pull-right">@btcpriceAPI<i class="fa fa-level-up"></i></div></li>
-                                                <li><i class="fa fa-usd"></i>Mantis Price<div class="text-success pull-right">@mantispriceAPI<i class="fa fa-level-up"></i></div></li>
+                                                <li><i class="fa fa-money"></i>Balance<div class="text-success pull-right">{{$balance.' '.$currency}}<i class="fa fa-level-up"></i></div></li>
+                                                <li><i class="fa fa-file-zip-o"></i>Uploads<div class="text-success pull-right">{{$file_count}}<i class="fa fa-level-up"></i></div></li>
+                                                <li><i class="fa fa-btc"></i>Bitcoin Price<div class="text-success pull-right">{{$btc_price}} $<i class="fa fa-level-up"></i></div></li>
+                                                <li><i class="fa fa-usd"></i>Mantis Price<div class="text-success pull-right">{{$coin_price}} $<i class="fa fa-level-up"></i></div></li>
                                             </ul>
                                         </div>
-                                        <button type="button" class="btn btn-default btn-rounded dashboard-browsers-showall">Refresh Stats</button>
                                     </div>
                                 </div>
                             </div>
@@ -32,15 +31,15 @@
                                         <div class="container-fluid">
                                             <div class="server-load row">
                                                 <div class="server-stat col-sm-4">
-                                                    <p>167GB</p>
+                                                    <p id="usage"></p>
                                                     <span>Usage</span>
                                                 </div>
                                                 <div class="server-stat col-sm-4">
-                                                    <p>320GB</p>
+                                                    <p id="space"></p>
                                                     <span>Space</span>
                                                 </div>
                                                 <div class="server-stat col-sm-4">
-                                                    <p>57.4%</p>
+                                                    <p id="cpu"></p>
                                                     <span>CPU</span>
                                                 </div>
                                             </div>

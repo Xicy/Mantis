@@ -19,7 +19,7 @@
 								<li><h2>Pay Via Mantis Network<img src="../../assets/images/icon-logo.png" alt="" class="img-circle" style="max-width: 20%"></h2></li>
 								<li>100MB Storage</li>
 								<li>$0.1 /// 20% Discount with Mantis Network</li>
-								<li>@Mantis Network in $ price</li>
+								<li>{{$coin_price}} in $ price</li>
 								<li>
 									<h3 class="pricing-tables-price">1GB/$0.99</h3>
 								</li>
@@ -60,7 +60,7 @@
 								<li><h2>Pay Via Bitcoin(BTC)<img src="../../assets/images/avatars/bitcoin.png" alt="" class="img-circle"></h2></li>
                                 <li>100MB Storage</li>
                                 <li>$0.12</li>
-                                <li>@btc in $ price</li>
+                                <li>{{$btc_price}} in $ price</li>
                                 <li>
                                     <h3 class="pricing-tables-price">1GB/$1.2</h3>
                                 </li>
@@ -101,7 +101,7 @@
                             <li><h2>Pay Via Mantis Network<img src="../../assets/images/icon-logo.png" alt="" class="img-circle" style="max-width: 20%"></h2></li>
                             <li>1GB Storage</li>
                             <li>$1 /// 20% Discount with Mantis Network</li>
-                            <li>@Mantis Network in $ price</li>
+                            <li>{{$coin_price}} in $ price</li>
                             <li>
                                 <h3 class="pricing-tables-price">10GB/$8.99</h3>
                             </li>
@@ -142,7 +142,7 @@
                             <li><h2>Pay Via Bitcoin (BTC)<img src="../../assets/images/avatars/bitcoin.png" alt="" class="img-circle"></h2></li>
                             <li>1GB Storage</li>
                             <li>$1.2</li>
-                            <li>@btc in $ price</li>
+                            <li>{{$btc_price}} in $ price</li>
                             <li>
                                 <h3 class="pricing-tables-price">10GB/$10</h3>
                             </li>
@@ -195,18 +195,20 @@
                                     </blockquote>
                                     <blockquote>
                                         <p>Open your desktop wallet console. Put "Masternode Genkey". Use your generated Masternode Genkey to activate your discount.</p>
-                                        <footer>your masternode <cite title="Source Title">@activated/inactivated</cite></footer>
+                                        <footer>your masternode <cite title="Source Title">{{ $hasMasterNode ? 'activated':'inactivated'}}</cite></footer>
                                     </blockquote>
+                                    @if(!$hasMasterNode)
                                     <blockquote class="blockquote-reverse">
-                                        <p><form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="control-label">Enter Your Masternode Genkey:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-
-                                    </form></p>
-                                       <button type="button" class="btn btn-info" ><footer> <cite title="Source Title">Submit Genkey</cite></footer></button>
+                                        <form method="POST" action="{{route('activate')}}">
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">Enter Your Masternode Genkey:</label>
+                                                {{csrf_field()}}
+                                                <input type="text" class="form-control" name="pubkey" id="recipient-name">
+                                            </div>
+                                            <button type="submit" class="btn btn-info" ><footer> <cite title="Source Title">Submit Genkey</cite></footer></button>
+                                        </form>
                                     </blockquote>
+                                    @endif
                                 </div>
                             </div>
                         </div>

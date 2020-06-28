@@ -38,7 +38,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','role_id', 'haveMasternode'
+        'name', 'email', 'password','role_id', 'hasMasternode'
     ];
 
     /**
@@ -95,27 +95,17 @@ class User extends Authenticatable
         return $this->wallets->sum('balance');
     }
 
-      /**
-     * Set to null if empty
-     * @param $input
-     */
-    public function setRoleIdAttribute($input)
+    public function files()
     {
-        $this->attributes['role_id'] = $input ? $input : null;
-    }
-
-    public function role()
-    {
-        return $this->belongsTo(Role::class, 'role_id');
-    }
-
-    public function videos()
-    {
-        return $this->hasMany(Video::class);
+        return $this->hasMany(File::class);
     }
 
     public function sendPasswordResetNotification($token)
     {
        $this->notify(new ResetPassword($token));
+    }
+
+    public function masternodes(){
+        return $this->hasMany(Masternode::class);
     }
 }

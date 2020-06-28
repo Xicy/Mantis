@@ -37,4 +37,16 @@ abstract class Base
             return floatval($this->getAbstractPrice($pair));
         });
     }
+
+    public function getCirculatingSupply(){
+        return Cache::remember($this->getCacheKey('usd_circulatingsupply'), 600, function () {
+            return floatval($this->getAbstractCirculatingSupply());
+        });
+    }
+
+    public function getVolume(){
+        return Cache::remember($this->getCacheKey('usd_volume'), 600, function () {
+            return floatval($this->getAbstractVolume());
+        });
+    }
 }

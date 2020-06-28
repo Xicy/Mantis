@@ -16,4 +16,14 @@ class Coinmarketcap extends Base
         $json = json_decode($data, true);
         return $json[0]["price_" . strtolower($pair)];
     }
+
+    protected function getAbstractVolume()
+    {
+        return 0;
+    }
+
+    protected function getAbstractCirculatingSupply()
+    {
+        return 0;
+    }
 }
