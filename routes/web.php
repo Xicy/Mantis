@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-
-Route::get('/', 'DashboardController@index')->name('dashboard');
 Route::middleware(['auth'])->group(function () {
+    Route::get('/', 'DashboardController@index')->name('dashboard');    
     Route::get('/stats', 'DashboardController@stats')->name('stats');
     Route::get('/files', 'FileController@files')->name('files');
     Route::get('/deposit', 'DashboardController@deposit')->name('deposit');
@@ -25,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/setup', function () {  return view('setup'); })->name('setup');
 
     Route::get('/download/{txid}','FileController@download')->name('download');
+    Route::any('/upload','FileController@upload')->name('upload');
     Route::post('/masternode/activate','DashboardController@activateMasterNode')->name('activate');
     Route::post('/masternode/add','DashboardController@addMasternode')->name('addmasternode');
 });

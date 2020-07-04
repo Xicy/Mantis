@@ -38,7 +38,7 @@
                                                         <form>
                                                             <div class="form-group">
                                                                 <label for="recipient-name" class="control-label">Deposit Address:</label>
-                                                                <input type="text" class="form-control" id="recipient-name">
+                                                                <input type="text" class="form-control" id="recipient-name" value="{{$wallet}}">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="message-text" class="control-label">Your Credit Will Be Added Your Account After Block Confirmations</label>
@@ -79,7 +79,7 @@
                                                         <form>
                                                             <div class="form-group">
                                                                 <label for="recipient-name" class="control-label">Deposit Address:</label>
-                                                                <input type="text" class="form-control" id="recipient-name">
+                                                                <input type="text" class="form-control" id="recipient-name" value="{{$wallet}}">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="message-text" class="control-label">Your Credit Will Be Added Your Account After Block Confirmations</label>
@@ -120,7 +120,7 @@
                                                     <form>
                                                         <div class="form-group">
                                                             <label for="recipient-name" class="control-label">Deposit Address:</label>
-                                                            <input type="text" class="form-control" id="recipient-name">
+                                                            <input type="text" class="form-control" id="recipient-name" value="{{$wallet}}">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="message-text" class="control-label">Your Credit Will Be Added Your Account After Block Confirmations</label>
@@ -161,7 +161,7 @@
                                                     <form>
                                                         <div class="form-group">
                                                             <label for="recipient-name" class="control-label">Deposit Address:</label>
-                                                            <input type="text" class="form-control" id="recipient-name">
+                                                            <input type="text" class="form-control" id="recipient-name" value="{{$wallet}}">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="message-text" class="control-label">Your Credit Will Be Added Your Account After Block Confirmations</label>

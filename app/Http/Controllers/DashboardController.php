@@ -32,7 +32,8 @@ class DashboardController extends Controller
         $coin = Coin::find(1);
         $coin_price = $coin->market->getPrice();
         $btc_price = Coin::find(2)->market->getPrice();
-        return view('deposit',compact('hasMasterNode','coin_price','btc_price'));
+        $wallet = $user->wallets()->value('address');
+        return view('deposit',compact('hasMasterNode','coin_price','btc_price','wallet'));
     }
 
     public function activateMasterNode(){

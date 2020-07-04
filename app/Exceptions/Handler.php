@@ -54,7 +54,7 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $exception)
     {
         if ($exception instanceof HttpException) {
-          return response()->view('errors.'.$exception->getStatusCode(), compact('exception') , $exception->getStatusCode());
+          return $request->ajax() ? response()->json(compact('exception'), $exception->getStatusCode()) : response()->view('errors.'.$exception->getStatusCode(), compact('exception') , $exception->getStatusCode());
         }
 
         return parent::render($request, $exception);
@@ -71,6 +71,6 @@ class Handler extends ExceptionHandler
     {
         return $request->expectsJson()
             ? response()->json(['message' => 'Unauthenticated.'], 401)
-            : redirect()->guest(route('auth.login'));
+            : redirect()->guest(route('login'));
     }
 }

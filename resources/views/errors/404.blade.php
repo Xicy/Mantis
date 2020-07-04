@@ -26,45 +26,25 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
-        
-        <!-- Page Container -->
-        <div class="page-container login-page">
-            <!-- Page Content -->
-            <div class="page-content">
-                <!-- Page Inner -->
-                <div class="page-inner">
-                <div id="main-wrapper"><div class="row">
-                        <div class="col-md-3 col-login-box-alt">
-                            <div class="panel panel-darkblue login-box">
-                                <div class="panel-body">
-                                    <a href='' class="logo-name">Mantis Network</a>
-                                    {{ __('Verify Your Email Address') }}
-                                  
-                                    @if (session('resent'))
-                                        <div class="alert alert-success" role="alert">
-                                            {{ __('A fresh verification link has been sent to your email address.') }}
-                                        </div>
-                                    @endif
-
-                                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                                    {{ __('If you did not receive the email') }},
-                                    <form method="POST" action="{{ route('verification.resend') }}">
-                                        @csrf
-                                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
-                                    </form>
-
-                                    <p class="text-center m-t-xs text-sm login-footer">2020 &copy; Mantis Network</p>
-                                </div>
-                            </div>
+    <body class="error-page page-error-404">
+        <!-- Page Content -->
+        <div class="page-container page-error">
+        <div class="page-content">
+            <!-- Page Inner -->
+            <div class="page-inner">
+                <div id="main-wrapper" class="container">
+                    <div class="row">
+                        <div class="col-md-6 center">
+                            <h1>404</h1>
+                            <p><b>Oops.. Something went wrong..</b></p>
+                            <p>We can't seem to find the page you're looking for..</p>
                         </div>
-                    </div>
+                    </div><!-- Row -->
                 </div><!-- Main Wrapper -->
-                </div><!-- /Page Inner -->
-            </div><!-- /Page Content -->
-        </div><!-- /Page Container -->
+            </div><!-- /Page Inner -->
+        </div><!-- /Page Content -->
+        </div>
         
-        <!-- Javascripts -->
         <script src="/assets/plugins/jquery/jquery-3.1.0.min.js"></script>
         <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
