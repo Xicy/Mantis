@@ -17,11 +17,11 @@ class FiatSeeder extends Seeder
     {
         /** @var Coin $coin */
         Coin::create([
-            "name" => "Simple Software Solutions",
+            "name" => "Mantis Coin",
             "key" => "simple-software-solutions",
-            "symbol" => "SSS",
+            "symbol" => "MC",
             "gateway" => DASH::class,
-            "rpc_url" => "http://sdjvndflhbvdflbh:akjfngvklebgvlkfsdbgvlkfds@199.247.7.91:6740",
+            "rpc_url" => "http://hola:bola@199.247.7.91:52566",
             "market" => Coingecko::class,
             "height" => 0,
             "enable" => true,

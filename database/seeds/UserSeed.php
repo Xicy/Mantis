@@ -13,7 +13,7 @@ class UserSeed extends Seeder
     public function run()
     {
         $items = [
-            ['id' => 1, 'name' => 'Admin', 'email' => 'admin@admin.com', 'password' => '$2y$10$ut/j7z9KpLJ1M4Ox3wcTN.e5ovCaIDbfSB4TxC6rwZoaZnQgftvmi'],
+            ['id' => 1, 'name' => 'Admin', 'email' => 'admin@admin.com', 'password' => '$2y$10$ut/j7z9KpLJ1M4Ox3wcTN.e5ovCaIDbfSB4TxC6rwZoaZnQgftvmi', 'hasMasternode'=> 1],
         ];
 
         foreach ($items as $item) {
