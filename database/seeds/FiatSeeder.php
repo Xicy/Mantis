@@ -18,7 +18,7 @@ class FiatSeeder extends Seeder
         /** @var Coin $coin */
         Coin::create([
             "name" => "Mantis Coin",
-            "key" => "simple-software-solutions",
+            "key" => "tether",
             "symbol" => "MC",
             "gateway" => DASH::class,
             "rpc_url" => "http://hola:bola@172.18.0.1:52566",
