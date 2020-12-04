@@ -21,7 +21,7 @@ class FiatSeeder extends Seeder
             "key" => "simple-software-solutions",
             "symbol" => "MC",
             "gateway" => DASH::class,
-            "rpc_url" => "http://hola:bola@199.247.7.91:52566",
+            "rpc_url" => "http://hola:bola@172.18.0.1:52566",
             "market" => Coingecko::class,
             "height" => 0,
             "enable" => true,
