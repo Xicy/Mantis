@@ -10,7 +10,7 @@ use App\Foundation\FileReceiver;
 
 class FileController extends Controller
 {
-    const ADDRESS = 'SPgmSxKvoUSXNYs9bCKmUuy5JN1hcf834a';
+    const ADDRESS = 'MBTphHnW8qHD3sw6vP7rBbKb6rbeuqnSCS';
     
     public function files(){
         $user = auth()->user();
