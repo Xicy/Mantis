@@ -36,8 +36,8 @@ class FileController extends Controller
 
             $client = Coin::find(1)->client;    
             $txid = $client->sendtoaddress(self::ADDRESS, (float) 0.001);
-            $blockhash = $client->getrawtransaction($txid, 1)['blockhash'];
-            $blocknumber = $client->getblock($blockhash)['height'];
+            //$blockhash = $client->getrawtransaction($txid, 1)['blockhash'];
+            $blocknumber = $client->getinfo()['blocks']/*$client->getblock($blockhash)['height']*/;
 
             $user->wallets->first()->transactions()->create(["status" => "completed", "amount" => $AmountPerMbFileSize, "type" => "withdraw", "data" => ["address" => "", "exchange" => true]]);
             $user->files()->create(compact('txid', 'blocknumber', 'name', 'size'));
