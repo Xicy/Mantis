@@ -66,7 +66,7 @@
                                 </li>
 								<li>
                                     <div class="panel-body">
-                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Deposit Bitcoin</button>
+                                        <button type="button" class="btn btn-warning btn-disabled" disabled data-toggle="modal" data-target="#exampleModal2" data-whatever="@getbootstrap">Not available yet</button>
 
                                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                                             <div class="modal-dialog" role="document">
@@ -148,7 +148,7 @@
                             </li>
                             <li>
                                 <div class="panel-body">
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Deposit Bitcoin</button>
+                                    <button type="button" class="btn btn-warning btn-disabled" disabled data-toggle="modal" data-target="#exampleModal2" data-whatever="@getbootstrap">Not available yet</button>
 
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                                         <div class="modal-dialog" role="document">

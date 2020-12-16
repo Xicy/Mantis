@@ -70,17 +70,17 @@
                                     <i class="menu-icon icon-star"></i><span>Links</span><i class="accordion-icon fa fa-angle-left"></i>
                                 </a>
                                 <ul class="sub-menu">
-                                    <li><a href="" target="_blank">Website</a></li>
+                                    <li><a href="https://mantis.network/" target="_blank">Website</a></li>
                                     <li><a href="" target="_blank">Discord</a></li>
-                                    <li><a href="" target="_blank">Explorer</a></li>
+                                    <li><a href="https://explorer.mantis.network/" target="_blank">Explorer</a></li>
                                     <li><a href="" target="_blank">Twitter</a></li>
-                                    <li><a href="" target="_blank">Github</a></li>
+                                    <li><a href="https://github.com/mantisnetwork/MANTISCoin" target="_blank">Github</a></li>
                                     <li><a href="" target="_blank">Bitcointalk</a></li>
                                 </ul>
                             </li>
                             <li class="menu-divider"></li>
                             <li>
-                                <a href="" target="_blank">
+                                <a href="https://mantis.network/images/Mantis_Network-Final_WP.pdf" target="_blank">
                                     <i class="menu-icon icon-public"></i><span>Whitepaper</span><span class="label label-danger">1.0</span>
                                 </a>
                             </li>
@@ -135,7 +135,7 @@
                 @endif
                 @yield('content')
                 <div class="page-footer">
-                    <p>Made with <i class="fa fa-heart"></i> by Ghetto</p>
+                    
                 </div>
                 </div><!-- /Page Inner -->
             </div><!-- /Page Content -->
