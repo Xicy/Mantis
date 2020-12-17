@@ -71,11 +71,11 @@
                                 </a>
                                 <ul class="sub-menu">
                                     <li><a href="https://mantis.network/" target="_blank">Website</a></li>
-                                    <li><a href="" target="_blank">Discord</a></li>
+                                    <li><a href="https://discord.gg/53AFNBmc2W" target="_blank">Discord</a></li>
                                     <li><a href="https://explorer.mantis.network/" target="_blank">Explorer</a></li>
-                                    <li><a href="" target="_blank">Twitter</a></li>
+                                    <li><a href="https://twitter.com/Mantis_Network" target="_blank">Twitter</a></li>
                                     <li><a href="https://github.com/mantisnetwork/MANTISCoin" target="_blank">Github</a></li>
-                                    <li><a href="" target="_blank">Bitcointalk</a></li>
+                                    <li><a href="https://bitcointalk.org/index.php?topic=5300700" target="_blank">Bitcointalk</a></li>
                                 </ul>
                             </li>
                             <li class="menu-divider"></li>
